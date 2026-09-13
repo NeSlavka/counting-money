@@ -5,7 +5,7 @@
 </div>
 
 ![Version](https://img.shields.io/badge/version-0.1.0-red)
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/license-Apache2.0-green)
 ![Stars](https://img.shields.io/github/stars/NeSlavka/counting-money)
 
 > [!IMPORTANT]
