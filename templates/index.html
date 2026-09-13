@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<title>Мани</title>
+</head>
+<body class="start">
+
+	<div class="test">
+		<div class="opisanie">
+			<p>За месяц</p>
+			<h1>{{ per_month }}</h1>
+			<p class="addition">{{ percent }}</p>
+		</div>
+
+		<div class="balance">
+			<p>Баланс</p>
+			<h1>{{ balance }}</h1>
+			<p class="addition">{{ percent2 }}</p>
+		</div>
+
+		<div class="card">
+			<p>TINFOFF</p>
+			<p class="addition">Black</p>
+			<h1>ㅤ</h1>
+			<div class="row">
+				<span class="name">Т. Огел</span>
+				<img src="{{ url_for('static', filename='master.png') }}" alt="Master" class="png">
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+
+
+
+		<div class="chart">	
+			<canvas id="doughnut" width="300" height="350"></canvas>
+		</div>
+
+		<div class="chart">
+			<canvas id="bb" width="700" height="350"></canvas>
+		</div>
+
+	</div>
+
+
+	
+	<script>
+		window.incomeData = {{ income_data | tojson }};
+		window.income = {{ income | tojson }};
+		window.expenses = {{ expenses | tojson }};
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.1/chart.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="{{ url_for('static', filename='chart1.js') }}"></script>
+	<script src="{{ url_for('static', filename='chart2.js') }}"></script>
+	<script src="{{ url_for('static', filename='chart3.js') }}"></script>
+	<script src="{{ url_for('static', filename='chart4.js') }}"></script>
+</body>
+
+
+</html>
